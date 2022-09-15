@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: asa-oppgave
+  namespace: apps
+  labels:
+    k8s-app: asa-oppgave
+spec:
+  ports:
+  - port: 80
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    k8s-app: asa-oppgave
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
