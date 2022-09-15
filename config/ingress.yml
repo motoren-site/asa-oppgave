@@ -12,7 +12,7 @@ spec:
     http:
       paths:
       - pathType: Prefix
-        path: "/asa-oppgave(/|$)(.*)"
+        path: "/asa-oppgave"
         backend:
           service:
             name: asa-oppgave
