@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: asa-oppgave
+  labels:
+    app: asa-oppgave
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: asa-oppgave
+  template:
+    metadata:
+      labels:
+        app: asa-oppgave
+    spec:
+      containers:
+      - name: asa-oppgave
+        image: asa-oppgave:latest
+        ports:
+        - containerPort: 8080
