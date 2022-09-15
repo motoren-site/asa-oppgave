@@ -15,7 +15,12 @@ spec:
         app: asa-oppgave
     spec:
       containers:
-      - name: asa-oppgave
-        image: <IMAGE>
-        ports:
-        - containerPort: 8080
+        - name: asa-oppgave
+          image: <IMAGE>
+          imagePullPolicy: Always
+      restartPolicy: Always
+      terminationGracePeriodSeconds: 30
+      dnsPolicy: ClusterFirst
+  strategy:
+    type: RollingUpdate
+  minReadySeconds: 5
