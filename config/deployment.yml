@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: asa-oppgave
+  namespace: apps
   labels:
     app: asa-oppgave
 spec:
