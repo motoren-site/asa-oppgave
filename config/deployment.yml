@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: asa-oppgave
-        image: asa-oppgave:latest
+        image: <IMAGE>
         ports:
         - containerPort: 8080
